@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+
+  <!-- Import Anton Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #C6F53A, #A8D233); /* 💚 green gradient */
+    }
+
+    .container {
+      width: 800px;
+      height: 450px;
+      background: #fff;
+      border-radius: 15px;
+      display: flex;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(198, 245, 58, 0.3), 0 8px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .left {
+      flex: 1;
+      background: linear-gradient(135deg, #A8D233, #C6F53A); /* 💚 matching gradient */
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    /* Logo Text */
+    .logo-text {
+      font-family: 'Anton', sans-serif;
+      font-size: 50px;
+      font-weight: 700;
+      margin: 0 0 15px 0;
+      color: #000;
+      letter-spacing: 1px;
+      text-transform: capitalize;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .left h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .left p {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .right {
+      flex: 1;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #000;
+    }
+
+    label {
+      font-size: 14px;
+      color: #000;
+      display: block;
+      margin-top: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #E0E0E0;
+      border-radius: 5px;
+      background-color: #F9F9F9;
+      font-size: 14px;
+      color: #000;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #C6F53A; /* 💚 primary */
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 15px;
+      margin-top: 20px;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #A8D233; /* 💚 hover */
+      box-shadow: 0 4px 15px rgba(198, 245, 58, 0.4);
+    }
+
+    .faculty-btn {
+      background: #fff;
+      color: #000;
+      border: 2px solid #C6F53A;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .faculty-btn:hover {
+      background: #C6F53A;
+      color: #000;
+      box-shadow: 0 4px 15px rgba(198, 245, 58, 0.4);
+    }
+
+    .signup-link {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 13px;
+      color: #555;
+    }
+
+    .signup-link a {
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .signup-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Left Panel -->
+    <div class="left">
+      <h1 class="logo-text">Updated</h1>
+      <h1>Welcome Back!</h1>
+      <p>Log in to access your personalized dashboard.</p>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="right">
+      <h2>Login</h2>
+
+      <!-- Student Login Form -->
+      <form action="login_process.php" method="POST">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter your password" required>
+
+        <button type="submit">Log In</button>
+      </form>
+
+      <!-- Faculty Login Button -->
+      <button type="button" class="faculty-btn" onclick="window.location.href='faculty_signup.html'">Faculty Login</button>
+
+      <div class="signup-link">
+        Don’t have an account? <a href="signup.html">Sign Up</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #C6F53A, #9DC928);
+    }
+
+    .container {
+      width: 750px;
+      height: 420px;
+      background: #FFFFFF;
+      border-radius: 15px;
+      display: flex;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .left {
+      flex: 1;
+      background: linear-gradient(135deg, #9DC928, #C6F53A);
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .left h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .left p {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .right {
+      flex: 1;
+      background: #F3F3F3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #000;
+    }
+
+    label {
+      font-size: 14px;
+      color: #222;
+      display: block;
+      margin-top: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #C6F53A;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 15px;
+      margin-top: 20px;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #9DC928;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-btn {
+      background: #fff;
+      color: #9DC928;
+      border: 2px solid #9DC928;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .back-btn:hover {
+      background: #9DC928;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Left Panel -->
+    <div class="left">
+      <h1>Faculty Login</h1>
+      <p>Access your faculty dashboard securely.</p>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="right">
+      <h2>Faculty Login</h2>
+
+      <form action="faculty_login_process.php" method="POST">
+        <label>Faculty ID</label>
+        <input type="text" name="faculty_id" placeholder="Enter your Faculty ID" required>
+
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter your password" required>
+
+        <button type="submit">Log In</button>
+      </form>
+
+      <button class="back-btn" onclick="window.location.href='login.html'">Back to Student Login</button>
+    </div>
+  </div>
+
+</body>
+</html>
